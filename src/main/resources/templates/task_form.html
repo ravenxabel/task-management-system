@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Tarea</title>
+</head>
+<body>
+<h1>Nueva Tarea</h1>
+
+<form th:action="@{/tasks}" th:object="${task}" method="post">
+    <label>Título:</label><br>
+    <input type="text" th:field="*{title}" required><br><br>
+
+    <label>Descripción:</label><br>
+    <textarea th:field="*{description}"></textarea><br><br>
+
+    <label>Fecha límite:</label><br>
+    <input type="date" th:field="*{dueDate}" required><br><br>
+
+    <label>Prioridad:</label><br>
+    <select th:field="*{priority}">
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+    </select><br><br>
+
+    <label>Estado:</label><br>
+    <select th:field="*{status}">
+        <option value="Pendiente">Pendiente</option>
+        <option value="En progreso">En progreso</option>
+        <option value="Completada">Completada</option>
+    </select><br><br>
+
+    <button type="submit">Guardar</button>
+</form>
+
+<br><a href="/tasks">⬅ Volver</a>
+</body>
+</html>
