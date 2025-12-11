@@ -50,8 +50,8 @@ public class HomeController {
         long overdueTasks = taskService.countTasksByStatus("Vencida");
 
         model.addAttribute("currentUser", currentUser);
-        model.addAttribute("tasks", tasks);           // Para Thymeleaf
-        model.addAttribute("tasksJson", tasksJson);   // Para JavaScript
+        model.addAttribute("tasks", tasks);
+        model.addAttribute("tasksJson", tasksJson);
         model.addAttribute("totalTasks", totalTasks);
         model.addAttribute("pendingTasks", pendingTasks);
         model.addAttribute("completedTasks", completedTasks);

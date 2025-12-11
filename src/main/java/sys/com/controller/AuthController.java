@@ -52,7 +52,7 @@ public class AuthController {
                 registrationDto.getApellido(),
                 registrationDto.getEmail(),
                 registrationDto.getPassword(),
-                Role.USER // Por defecto se registra como USER
+                Role.USER
             );
 
             redirectAttributes.addFlashAttribute("successMessage",

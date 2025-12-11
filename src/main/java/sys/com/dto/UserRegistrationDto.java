@@ -26,7 +26,7 @@ public class UserRegistrationDto {
     @NotBlank(message = "Debe confirmar la contraseña")
     private String confirmPassword;
 
-    private Role role = Role.USER; // Por defecto USER
+    private Role role = Role.USER;
 
     public UserRegistrationDto() {}
 
